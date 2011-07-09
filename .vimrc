@@ -26,15 +26,26 @@ set number
 " Show matching braces
 set showmatch
 
+" Incremental search (Emacs style)
+set incsearch
+
 " Adapt colors for dark background
 set background=dark
+
+" Statusline hotness
+set statusline=%F%m%r%h%w\ %y\ %=Buffer:\ %n\ (%l,%v)\ [%p%%] 
+set laststatus=2
+highlight StatusLine ctermfg=darkgrey ctermbg=white
+
+" Fix for Ubuntu default
+let g:netrw_winsize=""
 
 syntax enable
 filetype on
 filetype plugin indent on
 
 " Ruby convention for tabs
-autocmd FileType ruby set tabstop=2|set softtabstop=2|set shiftwidth=2
+autocmd FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 " Eclipse-style block movement
 vmap <C-j> :m'>+<CR> gv
