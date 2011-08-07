@@ -47,6 +47,9 @@ filetype plugin indent on
 " Ruby convention for tabs
 autocmd FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
+" Same for coffeescript
+autocmd FileType coffee setlocal tabstop=2 softtabstop=2 shiftwidth=2
+
 " Gemfiles are ruby files
 autocmd BufRead,BufNewFile Gemfile setfiletype ruby
 
