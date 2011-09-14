@@ -53,6 +53,9 @@ autocmd FileType coffee setlocal tabstop=2 softtabstop=2 shiftwidth=2
 " Gemfiles are ruby files
 autocmd BufRead,BufNewFile Gemfile setfiletype ruby
 
+" Use Javascript filetype for JSON files
+autocmd BufRead,BufNewFile *.json setfiletype javascript
+
 " Eclipse-style block movement
 vmap <C-j> :m'>+<CR> gv
 vmap <C-k> :m'<-2<CR> gv
