@@ -38,6 +38,9 @@ filetype on
 filetype plugin indent on
 autocmd FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 
+" 2 spaces for anything with .html
+autocmd BufRead,BufNewFile *.html setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+
 " Use Javascript filetype for JSON files
 autocmd BufRead,BufNewFile *.json setfiletype javascript
 
@@ -48,5 +51,7 @@ au BufNewFile,BufRead *.html set syntax=htmljinja
 vmap <C-j> :m'>+<CR> gv
 vmap <C-k> :m'<-2<CR> gv
 
-" Hide patterns for NERDTree
+" NERDTree Settings
 let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeChDirMode = 2  " Change working directory as NERDTree changes directories
+
