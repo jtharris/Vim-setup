@@ -55,3 +55,5 @@ vmap <C-k> :m'<-2<CR> gv
 let NERDTreeIgnore = ['\.pyc$']
 let NERDTreeChDirMode = 2  " Change working directory as NERDTree changes directories
 
+" Fuzzy Finder Hotness...
+nnoremap <C-f> :FufCoverageFile<CR>
